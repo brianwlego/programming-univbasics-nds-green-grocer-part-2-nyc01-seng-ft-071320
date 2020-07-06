@@ -18,7 +18,8 @@ def apply_coupons(cart, coupons)
       item.delete(:cost)
       new_cart.push(item)
       new_cart.push(cart_item)
-      #binding.pry
+    else
+      new_cart.push(cart_item)
       end
     end
   end
