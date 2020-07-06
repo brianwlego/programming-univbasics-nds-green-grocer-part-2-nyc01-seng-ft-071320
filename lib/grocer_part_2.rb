@@ -26,7 +26,8 @@ def apply_coupons(cart, coupons)
   new_cart.map do |new_cart_item|
     if new_cart_item[:count] == 0
       new_cart.delete(new_cart_item)
-  end  
+      binding.pry
+    end  
   if coupons == []
     cart
   else
