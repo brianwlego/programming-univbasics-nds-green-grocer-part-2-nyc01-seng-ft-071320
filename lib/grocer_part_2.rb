@@ -23,6 +23,10 @@ def apply_coupons(cart, coupons)
       end
     end
   end
+  new_cart.each do |new_cart_item|
+    
+    binding.pry
+  end  
   if coupons == []
     cart
   else
