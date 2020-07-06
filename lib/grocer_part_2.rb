@@ -49,7 +49,7 @@ end
 def checkout(cart, coupons)
   #binding.pry
   new_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
-  #binding.pry
+  binding.pry
   final_total = 0 
   new_cart.map do |item|
     
