@@ -19,7 +19,7 @@ def apply_coupons(cart, coupons)
       new_cart.push(item)
       new_cart.push(cart_item)
     else
-      new_cart.push(cart_item)
+      #new_cart.push(cart_item)
       end
     end
   end
