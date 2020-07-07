@@ -2,12 +2,9 @@ require_relative './part_1_solution.rb'
 require 'pry'
 
 def apply_coupons(cart, coupons)
-  coupon_names = coupons.each_with_object([]) {|names, a| a << names[:item]}
-  #binding.pry
   new_cart = []
   cart.each do |cart_item|
     coupons.each do |item|
-      #binding.pry
       if item[:item] == cart_item[:item] && cart_item[:count] >= item[:num]
       item[:clearance] = cart_item[:clearance]
       item[:item] = "#{item[:item]} W/COUPON"
@@ -23,16 +20,16 @@ def apply_coupons(cart, coupons)
       end
     end
   end
-    # new_cart.map do |new_cart_item|
-    #  if new_cart_item[:count] == 0
-    #  new_cart.delete(new_cart_item)
-    #  end
-    # end  
-  if coupons == []
-    cart
-  else
-    new_cart
-  end 
+    new_cart.map do |new_cart_item|
+      if new_cart_item[:count] == 0
+      new_cart.delete(new_cart_item)
+      end
+    end  
+    if coupons == []
+      cart
+    else
+      new_cart
+    end 
 end
 
 def apply_clearance(cart)
