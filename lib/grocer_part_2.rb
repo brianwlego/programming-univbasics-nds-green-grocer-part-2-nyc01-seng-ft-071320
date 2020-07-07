@@ -51,8 +51,10 @@ def checkout(cart, coupons)
   a = consolidate_cart(cart)
   b =apply_coupons(a, coupons)
   b.each do |item|
-    
-    binding.pry
+    if item[:item] == 
+      
+      binding.pry
+    end
   end  
   binding.pry
   new_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
