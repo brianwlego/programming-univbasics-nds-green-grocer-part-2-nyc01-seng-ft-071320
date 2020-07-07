@@ -58,7 +58,7 @@ def checkout(cart, coupons)
   final_total = 0 
   new_cart.map do |item|
     
-    final_total += item[:price]*item[:count]
+    final_total += (item[:price]*item[:count]).round(2)
     #binding.pry
   end  
   final_total
