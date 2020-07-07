@@ -48,12 +48,12 @@ end
 
 
 def checkout(cart, coupons)
-  a = consolidate_cart(cart)
-  b = apply_coupons(a, coupons).uniq
-  c = apply_clearance(b)
+  #a = consolidate_cart(cart)
+  #b = apply_coupons(a, coupons).uniq
+  #c = apply_clearance(b)
    
   #binding.pry
-  new_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
+  new_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons).uniq)
   #binding.pry
   final_total = 0 
   new_cart.map do |item|
