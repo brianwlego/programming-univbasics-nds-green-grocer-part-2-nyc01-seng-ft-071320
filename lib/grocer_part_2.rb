@@ -52,7 +52,7 @@ end
 
 
 def checkout(cart, coupons)
-  #binding.pry
+  binding.pry
   new_cart = apply_clearance(apply_coupons(consolidate_cart(cart), coupons))
   binding.pry
   final_total = 0 
