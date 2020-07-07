@@ -19,11 +19,11 @@ def apply_coupons(cart, coupons)
       new_cart.push(item)
       new_cart.push(cart_item)
     else
-      #new_cart.push(cart_item)
+      new_cart.push(cart_item)
       end
     end
   end
-  new_cart.map do |new_cart_item|
+    new_cart.map do |new_cart_item|
       if new_cart_item[:count] == 0
       new_cart.delete(new_cart_item)
       end
