@@ -49,7 +49,7 @@ end
 
 def checkout(cart, coupons)
   a = consolidate_cart(cart)
-  b =apply_coupons(a, coupons)
+  b = apply_coupons(a, coupons)
   b.uniq 
    
   binding.pry
